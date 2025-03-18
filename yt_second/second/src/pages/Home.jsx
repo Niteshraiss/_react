@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 import { useState } from "react";
 
 function Home() {
@@ -21,19 +21,13 @@ function Home() {
         <>
             <div className="home" onMouseEnter={colorChange} onMouseLeave={backChange} style={{ backgroundColor: color }}>
                 <div>
-                   <p>Hover over me={counter}</p> 
+                    <p>Hover over me={counter}</p>
                 </div>
                 <div>
-                   <p>{name}</p> 
+                    <p>{name}</p>
                     <button className="button" onClick={printSomething}>Change my type</button>
                 </div>
             </div>
-=======
-function Home(){
-    return(
-        <>
-        <div className="home">Home</div>
->>>>>>> cb75d3519d25e094614b187ef392ab230b9a7105
         </>
     )
 }
