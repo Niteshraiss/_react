@@ -11,11 +11,7 @@ function App() {
   return (
     <>
       <BrowserRouter>
-<<<<<<< HEAD
         <Navigation />
-=======
-      <Navigation/>
->>>>>>> cb75d3519d25e094614b187ef392ab230b9a7105
         <Routes>
           <Route path='/home' element={<Home />} />
           <Route path='/products' element={<Product />} />
