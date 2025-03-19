@@ -4,10 +4,13 @@ export default function Navigation() {
         <>
             <ul className='navbar'>
                 <li>
-                    <Link to="/home" className='navbar-items'>Home</Link>
+                    <Link to="/index" className='navbar-items'>Home</Link>
                 </li>
                 <li>
                     <Link to="/products" className='navbar-items'>Products</Link>
+                </li>
+                <li>
+                    <Link to="/profile" className='navbar-items'>Profile</Link>
                 </li>
             </ul>
         </>

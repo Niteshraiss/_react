@@ -6,6 +6,7 @@ import Home from './pages/Home'
 import Product from './pages/Product'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Navigation from './components/Navigation'
+import Profile from './pages/Profile'
 function App() {
 
   return (
@@ -13,8 +14,9 @@ function App() {
       <BrowserRouter>
         <Navigation />
         <Routes>
-          <Route path='/home' element={<Home />} />
+          <Route path='/index' element={<Home />} />
           <Route path='/products' element={<Product />} />
+          <Route path='/profile' element={<Profile />} />
         </Routes>
       </BrowserRouter>
     </>

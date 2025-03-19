@@ -77,3 +77,11 @@ a {
 a:visited {
     color: orange;
 }
+.profile{
+    width: 100%;
+    height: 80vh;
+    background-color: blanchedalmond;
+}
+.m-2{
+    margin:0.5rem;
+}
