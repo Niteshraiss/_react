@@ -1,0 +1,12 @@
+.featureShow {
+    width: 25%;
+    height: 500px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.featureShow>img {
+   width: 100%;
+}

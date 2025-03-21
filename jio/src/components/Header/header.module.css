@@ -5,6 +5,7 @@
     height: 70px;
     background-color: #000707;
     padding: 0 2%;
+    border-bottom: 1px solid #2c2c22;
 }
 
 .navigation {
@@ -12,6 +13,7 @@
     height: 70px;
     display: flex;
     column-gap: 35px;
+    cursor: pointer;
 }
 
 .premium {
