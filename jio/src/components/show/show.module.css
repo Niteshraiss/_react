@@ -1,0 +1,9 @@
+.show{
+    width: 19%;
+    height: 400px;
+    overflow: hidden;
+}
+.show > img{
+    width: 100%;
+    height: 100%;
+}
