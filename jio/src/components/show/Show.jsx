@@ -1,10 +1,16 @@
 import styles from './show.module.css'
 
-export const Show = () => {
+export const Show = (props) => {
     return (
         <>
             <div className={styles.show}>
-                <img src="https://upload.wikimedia.org/wikipedia/en/d/df/3_idiots_poster.jpg" alt="poster" />
+                <img src={props.movie.imageUrl} alt="poster" />
+                <div className={styles.movieTitle}>
+                    {props.movie.name}
+                <p className={styles.movieCast}>
+                    {props.movie.cast}
+                </p>
+                </div>
             </div>
         </>
     )

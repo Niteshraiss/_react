@@ -12,7 +12,8 @@ export default function Home() {
     let [dramaMovies, setDramaMovies] = useState([])
     let [hindiMovies, setHindiMovies] = useState([])
     let [topMovies, setTopMovies] = useState([])
-
+    let [JapaneseMovies,setJapaneseMovies] = useState([])
+    
     useEffect(async () => {
         try {
             let movieResponse = await fetch("http://localhost:3000/movies/")
@@ -23,25 +24,30 @@ export default function Home() {
             let featMovies = moviesData.filter((movie) => {
                 return movie.featured == true
             })
-            setFeaturedMovies(featMovies)
+            setFeaturedMovies(featMovies.slice(0,4))
 
             //filter for action movies
             let dramMovies = moviesData.filter((movie) => {
                 return movie.genre.includes("Drama")
             })
-            setDramaMovies(dramMovies)
+            setDramaMovies(dramMovies.slice(0,5))
 
             //filter for hindi movies
             let hindMovies = moviesData.filter((movie) => {
                 return movie.language=="Hindi"
             })
-            setHindiMovies(hindMovies)
+            setHindiMovies(hindMovies.slice(0,5))
 
              //filter for top movies
              let topMovies = moviesData.filter((movie) => {
                 return movie.imdb >=8.5
             })
-            setTopMovies(topMovies)
+            setTopMovies(topMovies.slice(0,5))
+
+             let japMovies = moviesData.filter((movie) => {
+                return movie.language=="Japanese"
+            })
+            setJapaneseMovies(japMovies.slice(0,5))
         }
         catch (err) {
             console.log(err)
@@ -52,14 +58,15 @@ export default function Home() {
 
     return (
         <>
-            <Header />
+            <Header movies={movies}/>
             <Tags />
             <Carousel />
             <Channels />
-            <Feature />
-            <Shows title="Action Movies" />
-            <Shows title="Hindi Movies" />
-            <Shows title="English Movies" />
+            <Feature  movies={featuredMovies}/>
+            <Shows title="Drama Movies" movies={dramaMovies}/>
+            <Shows title="Hindi Movies" movies={hindiMovies}/>
+            <Shows title="Highly Rated Movies" movies={topMovies} />
+            <Shows title="Japanese Movies" movies={JapaneseMovies} />
         </>
     )
 }

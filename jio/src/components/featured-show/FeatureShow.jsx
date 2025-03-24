@@ -1,10 +1,13 @@
 import styles from './feature-show.module.css'
 
-export const FeatureShow = () => {
+export const FeatureShow = (props) => {
     return (
         <>
             <div className={styles.featureShow}>
-                <img src="https://m.media-amazon.com/images/M/MV5BMTMxNTMwODM0NF5BMl5BanBnXkFtZTcwODAyMTk2Mw@@._V1_FMjpg_UX1000_.jpg" alt="" />
+                <img src={props.movie.imageUrl} alt="" />
+                <div className={styles.movieTitle}>
+                    {props.movie.name}
+                </div>
             </div>
         </>
     )
